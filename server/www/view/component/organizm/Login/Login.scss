@@ -1,0 +1,33 @@
+@import '../../../../../node_modules/bootstrap/scss/mixins/_grid.scss';
+@import '../../../../style/button.scss';
+@import '../../../../style/variable.scss';
+
+.login {
+  font-size: 2em;
+  & > .container {
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: #000 1px 1px 1px;
+    padding: 1em 2.5em;
+    height: 10em;
+    width: 15em;
+    @include center;
+    .col-sm {
+      position: relative;
+      height: 1.7em;
+      & > button {
+        @include center;
+        @include button( 6em, 3em, 1.5em * 0.5 );
+        @include white-text;
+      }
+      .person {
+        height: 1.5em;
+        font-family: 'Cairo';
+      }
+      & > #message {
+        margin-top: 1em;
+        font-family: 'Cairo';
+      }
+    }
+  }
+}

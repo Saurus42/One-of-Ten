@@ -1,0 +1,65 @@
+@import '../../../../../node_modules/bootstrap/scss/mixins/_grid.scss';
+@import '../../../../style/button.scss';
+
+.class-theme {
+  @include make-row;
+  font-family: "Cairo";
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: center;
+  flex-wrap: nowrap;
+  .formular, .list-students {
+    @include make-col(6);
+    background-color: #578CF7;
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1em;
+    font-size: 1em;
+    button {
+      font-family: "Cairo";
+      margin-top: 1em;
+      &:first-child {
+        margin-top: 0;
+      }
+      @include button( 6em, 3em, 0.75em );
+    }
+    width: 46%;
+    @media (max-width: 1366px) {
+      width: 45%
+    }
+    @media (max-width: 1284px) {
+      width: 44%;
+    }
+  }
+  .formular {
+    input {
+      font-family: "Cairo";
+      font-size: 1em;
+    }
+    .list {
+      @include make-col-auto;
+      width: 100%;
+      & > .row {
+        margin-top: 0.5em;
+        &:hover {
+          background-color: #5086F0;
+        }
+        & > .col-sm {
+          &:first-child {
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+            padding-left: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.list-students {
+  .col-sm-8 {
+    & > .row {
+      margin: 0.5em 0;
+    }
+  }
+}

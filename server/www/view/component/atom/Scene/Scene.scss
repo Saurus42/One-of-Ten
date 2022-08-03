@@ -1,0 +1,113 @@
+@import '../../../../../node_modules/bootstrap/scss/mixins/_grid.scss';
+@import '../../../../style/button.scss';
+@import '../../../../style/variable.scss';
+
+.scenes {
+  &-header, &-category, &-content, &-status {
+    .header, .category, .content {
+      font-family: 'Cairo';
+      font-weight: bold;
+      background-color: #578CF7;
+      margin-top: 1em;
+      width: 100%;
+      min-height: 3.25em;
+      text-align: center;
+      padding-top: 0.25em;
+    }
+    .content {
+      font-family: 'Cairo';
+    }
+    .content, .category {
+      font-weight: normal;
+    }
+  }
+  &-status {
+    display: flex;
+    .status {
+      width: 50%;
+      font-family: "Cairo";
+      box-sizing: border-box;
+      background-color: #578CF7;
+      margin-top: 1em;
+      margin-right: 0.25em;
+      text-align: center;
+      .lives {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        margin-bottom: 0.5em;
+        .scenes-life {
+          width: 0.5em;
+          height: 0.5em;
+          border-radius: 1em;
+          background-color: #fff;
+          margin-left: 0.25em;
+          &:first-child {
+            margin-left: 0em;
+          }
+        }
+      }
+    }
+  }
+  &-quest {
+    display: flex;
+    .quest {
+      font-family: "Cairo";
+      @include button( 50%, 2em, inherit );
+      text-align: center;
+      box-sizing: border-box;
+      margin-top: 1em;
+      min-height: 2em;;
+      padding-top: 0.5em;
+      &:last-child {
+        margin-left: 0.5em;
+      }
+    }
+  }
+  &-selected {
+    .selected {
+      font-family: 'Cairo';
+      background-color: #578CF7;
+      margin-top: 1em;
+      width: 100%;
+      min-height: 3.25em;
+      text-align: center;
+      padding-top: 0.25em;
+    }
+  }
+  &-readed {
+    @include make-row;
+    .readed {
+      font-family: 'Cairo';
+      margin-top: 1em;
+      margin-left: 1em;
+      @include button( 15em, 2em, inherit );
+      @include white-text;
+    }
+  }
+  &-select {
+    .button {
+      background-color: #53AEED;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.table {
+  @include make-col( 12 );
+  .header {
+    font-weight: bold;
+  }
+  .tr {
+    @include make-row;
+    border-top: 1px solid white;
+    &:first-child {
+      border-top: none;
+    }
+    .td {
+      @include make-col( 3 );
+    }
+  }
+}

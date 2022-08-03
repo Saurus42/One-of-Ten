@@ -1,0 +1,42 @@
+@import '../../../../../node_modules/bootstrap/scss/mixins/_grid.scss';
+@import '../../../../style/button.scss';
+@import '../../../../style/variable.scss';
+
+.show-quest {
+  @include make-row;
+  font-family: 'Cairo';
+  width: 100%;
+  & > .col-sm {
+    background-color: #578CF7;
+    margin-top: 1em;
+    padding: 1em;
+  }
+  select {
+    font-family: "Cairo";
+    margin-left: 0.5em;
+  }
+  h1 {
+    font-family: 'Cairo';
+  }
+  &-collection {
+    font-family: 'Cairo';
+    @include make-row;
+    padding-left: 1em;
+    padding-right: 1em;
+    &:hover {
+      background-color: #5086F0;
+    }
+  }
+  button {
+    @include button( 6em, 3em, 1.5em * 0.5 );
+    font-family: 'Cairo';
+    @include white-text;
+  }
+  & + .row {
+    button {
+      @include button( 6em, 3em, 1.5em * 0.5 );
+      font-family: 'Cairo';
+      @include white-text;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import '../../../../../node_modules/bootstrap/scss/mixins/grid';
+@import '../../../../style/button.scss';
+@import '../../../../style/variable.scss';
+
+.menu {
+  @include make-row;
+  width: inherit;
+  justify-content: center;
+  margin-top: 1em;
+  .menu-vertical {
+    @include make-col-auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.25em;
+    box-sizing: border-box;
+    @include button( 8em, 2em, 1em );
+    @include white-text;
+  }
+  .menu-horizontal {
+    @include make-col-auto;
+    flex-direction: row;
+    margin-left: 1em;
+    text-align: center;
+    padding: 0.25em;
+    box-sizing: border-box;
+    @include button( 10em, 2em, 1em );
+    @include white-text;
+  }
+}
+
+.submenu {
+  @include make-row;
+  height: inherit;
+  justify-content: center;
+  .menu-vertical {
+    @include make-col-auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.25em;
+    box-sizing: border-box;
+    @include button( 75%, 2em, 1em );
+    @include white-text;
+    margin-top: 0.5em
+  }
+  .menu-horizontal {
+    @include make-col-auto;
+    flex-direction: row;
+    margin-left: 1em;
+    text-align: center;
+    padding: 0.25em;
+    box-sizing: border-box;
+    @include button( 10em, 2em, 1em );
+    @include white-text;
+  }
+}

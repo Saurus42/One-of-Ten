@@ -1,0 +1,16 @@
+@import '../../../../../node_modules/bootstrap/scss/mixins/_grid.scss';
+@import '../../../../style/button.scss';
+@import '../../../../style/variable.scss';
+
+.scenes {
+  & > .col-sm-3 {
+    button {
+      @include button( 75%, 75%, 1em );
+      font-family: 'Cairo';
+      @include white-text;
+    }
+  }
+  & > .text {
+    padding: 1em 0;
+  }
+}

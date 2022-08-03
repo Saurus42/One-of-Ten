@@ -1,0 +1,21 @@
+@import '../../../../../node_modules/bootstrap/scss/mixins/_grid.scss';
+@import '../../../../style/button.scss';
+
+.create-user {
+  background-color: #578CF7;
+  border-radius: 1em;
+  width: 100%;
+  margin: 1em 2em;
+  padding: 1em 1em;
+  font-family: "Cairo";
+  .data-user {
+    font-family: "Cairo";
+    &:hover {
+      background-color: #5086F0;
+    }
+    button {
+      font-family: "Oswald";
+      @include button( 6em, 3em, 0.75em );
+    }
+  }
+}

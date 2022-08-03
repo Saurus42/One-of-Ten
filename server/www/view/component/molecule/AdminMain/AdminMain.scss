@@ -1,0 +1,21 @@
+@import '../../../../../node_modules/bootstrap/scss/mixins/_grid.scss';
+
+#table {
+  @include make-col-auto;
+  .tr {
+    @include make-row;
+    &:first-child {
+      .td {
+        border-top: none;
+      }
+    }
+    .td {
+      @include make-col-auto;
+      border-left: 1px solid black;
+      border-top: 1px solid black;
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+}
