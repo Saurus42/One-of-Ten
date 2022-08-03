@@ -1,0 +1,9 @@
+@mixin button( $width, $height, $size ) {
+  background-color: #53AEED;
+  border: none;
+  font-size: $size;
+  width: $width;
+  font-family: "Oswald";
+  height: $height;
+  cursor: pointer;
+}

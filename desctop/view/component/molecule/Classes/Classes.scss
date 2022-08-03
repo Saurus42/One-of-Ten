@@ -1,0 +1,48 @@
+@import '../../../../node_modules/bootstrap/scss/mixins/_grid.scss';
+@import '../../../../sass/button.scss';
+@import '../../../../sass/variable.scss';
+
+.form-up-menu, .form-down-menu {
+  @include make-row;
+  background-color: #578CF7;
+  font-family: "Cairo";
+  padding: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.form-up-menu {
+  input {
+    font-family: "Cairo";
+  }
+}
+
+.form-down-menu {
+  button {
+    @include button( 6em, 3em, 1em );
+    font-family: "Cairo";
+    @include white-text;
+  }
+}
+
+.list-classes {
+  @include make-row;
+  font-family: "Cairo";
+  margin-top: 1em;
+  margin-bottom: 1em;
+  & > .class {
+    @include make-col-auto;
+    font-family: "Cairo";
+    margin-left: 1em;
+    padding: 1em;
+    box-sizing: border-box;
+    @include button( 6em, 3em, 1em );
+    &:first-child {
+      margin-left: 1.75em;
+    }
+  }
+}
+
+button {
+  @include white-text;
+}

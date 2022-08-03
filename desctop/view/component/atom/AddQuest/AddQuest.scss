@@ -1,0 +1,32 @@
+@import '../../../../node_modules/bootstrap/scss/mixins/_grid.scss';
+@import '../../../../sass/button.scss';
+@import '../../../../sass/variable.scss';
+
+.add-quest {
+  @include make-col-auto;
+  font-family: 'Cairo';
+  .row-quest {
+    @include make-row;
+    box-sizing: border-box;
+    width: 100%;
+    &:hover {
+      background-color: #565DB0;
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+    }
+    input[type="text"] {
+      font-family: 'Quicksand';
+      width: 95%;
+    }
+    textarea {
+      font-family: 'Quicksand';
+      width: 95%;
+    }
+    button[type="button"] {
+      @include button( 8em, 2em, 1em );
+      @include white-text;
+      font-family: 'Oswald';
+      margin: 0 2em;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../../../node_modules/bootstrap/scss/mixins/_grid.scss';
+
+.list-users {
+  background-color: #578CF7;
+  width: 100%;
+  margin-left: 0%;
+  font-family: "Cairo";
+  &:hover {
+    background-color: #5086F0;
+  }
+  .user {
+    font-family: "Cairo";
+    width: 12%;
+  }
+}

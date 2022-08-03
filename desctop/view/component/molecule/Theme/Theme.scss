@@ -1,0 +1,44 @@
+@import '../../../../sass/variable.scss';
+
+.container {
+  & > .content {
+    background-color: #5A62E0;
+    min-height: 5em;
+    border-radius: 1em;
+    padding: 0.5em;
+    box-sizing: border-box;
+    margin-top: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+    @include white-text;
+  }
+  & > .images {
+    position: relative;
+    width: 100%;
+    height: 421px;
+    & > img {
+      @include center;
+    }
+    @media (max-width: 1115px) {
+      height: 372px;
+      & > img {
+        width: 860px;
+        height: 362px;
+      }
+    }
+    @media (max-width: 991px) {
+      height: 271px;
+      & > img {
+        width: 620px;
+        height: 261px;
+      }
+    }
+    @media (max-width: 767px) {
+      height: 195px;
+      & > img {
+        width: 440px;
+        height: 185px;
+      }
+    }
+  }
+}

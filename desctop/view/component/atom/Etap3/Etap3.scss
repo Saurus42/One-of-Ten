@@ -1,0 +1,16 @@
+@import '../../../../node_modules/bootstrap/scss/mixins/_grid.scss';
+@import '../../../../sass/button.scss';
+@import '../../../../sass/variable.scss';
+
+.scenes {
+  &-me {
+    @include make-row;
+    .me {
+      font-family: 'Oswald';
+      margin-top: 1em;
+      margin-left: 1em;
+      @include button( 15em, 2em, inherit );
+      @include white-text;
+    }
+  }
+}
